@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+
+    <!-- <form onsubmit="onSubmit()"> -->
+        <input id="number1" type="number" placeholder="Enter first number" required>
+        <input id="number2" type="number" placeholder="Enter second number" required>
+        <br>
+        <p id="Equal" style="border: 1px solid black;
+        height: 3vh;
+        width: 15%;">
+            =
+        </p>
+        
+        <button onclick="firstAdd()">Add</button>
+        <button onclick="secSub()">Subtract</button>
+        <button onclick="thirdMult()">Multiply</button>
+        <button onclick="fourthDiv()">Divide</button>
+    <!-- </form> -->
+
+    <script>
+    
+
+        function firstAdd() {
+
+            let number1 = document.getElementById("number1").value
+            let number2 = document.getElementById("number2").value
+
+            number1 = parseInt(number1)
+            number2 = parseInt(number2)
+
+            // let result = number1+number2;
+            // alert(number1 + number2);
+            
+            let equalTo = document.getElementById("Equal");
+            // equalTo = number1+number2;
+            equalTo.innerHTML = '='  + (number1 + number2);
+
+
+        }
+
+        function secSub() {
+
+            let number1 = document.getElementById("number1").value
+            let number2 = document.getElementById("number2").value
+
+            number1 = parseInt(number1)
+            number2 = parseInt(number2)
+
+     
+
+            let equalTo = document.getElementById("Equal");
+        
+            equalTo.innerHTML = '=' + (number1 - number2);
+        }
+        function thirdMult() {
+
+            let number1 = document.getElementById("number1").value
+            let number2 = document.getElementById("number2").value
+
+            number1 = parseFloat(number1)
+            number2 = parseFloat(number2)
+
+            // console.log(number1 + number2);
+            // alert(number1 * number2);
+
+            let equalTo = document.getElementById("Equal");
+            
+            equalTo.innerHTML = '=' + (number1 * number2);
+        }
+        function fourthDiv() {
+
+            let number1 = document.getElementById("number1").value
+            let number2 = document.getElementById("number2").value
+
+            number1 = parseFloat(number1)
+            number2 = parseFloat(number2)
+
+            // console.log(number1 + number2);
+            // alert(number1 / number2);
+
+            let equalTo = document.getElementById("Equal");
+    
+            equalTo.innerHTML = '=' + (number1 / number2);
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
